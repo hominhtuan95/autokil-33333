@@ -1,0 +1,15 @@
+AUTO SKILL 3SKILL - CHIEN QUOC 2D AEGIS V25
+
+1. Đây là công cụ mới viết bằng Python, KHÔNG phải bản sửa nhị phân của tool cũ.
+2. Cài Python 3.10+ trên Windows và chọn Add Python to PATH.
+3. Chạy BUILD_EXE.bat để tạo dist\AutoSkill_3Skill_Aegis_V25.exe.
+4. Mở game, kiểm tra tên hiển thị trên thanh tiêu đề cửa sổ.
+5. Mở tool, nhập một phần tên cửa sổ game, ví dụ 'Chiến Quốc'.
+6. Chọn 3 phím và thời gian lặp theo mili giây. Bấm Bắt đầu hoặc F8.
+7. Tool chỉ gửi phím khi cửa sổ game đang được chọn.
+
+LƯU Ý:
+- DatVersion=2.01.09 trong patch.ini là phiên bản dữ liệu, không xác nhận giao thức client.
+- Chưa thử trên game thực tế. Một số game không nhận keybd_event hoặc có quy định cấm auto.
+- Nếu không nhận phím, cần kiểm tra tên cửa sổ và cơ chế nhập liệu của client; không có bảo đảm tương thích.
+- Không cần .NET SDK. Cần Python và PyInstaller CHỈ trên máy đóng gói; EXE tạo ra có thể chạy không cần cài Python.
