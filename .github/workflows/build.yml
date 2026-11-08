@@ -1,32 +1,21 @@
-
-name: Build Auto Skill 3Skill EXE
-
+name: Build Auto Train 3Skill EXE
 on:
   workflow_dispatch:
-
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-      - name: Lay ma nguon
-        uses: actions/checkout@v4
-
-      - name: Cai Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Cai PyInstaller
+      - name: Install PyInstaller
         run: python -m pip install pyinstaller
-
-      - name: Tao Auto Skill EXE
-        run: |
-          python -m PyInstaller --onefile --windowed --name AutoSkill_3Skill_Aegis_V25 AutoSkill_3Skill_Aegis_V25.py
-
-      - name: Tai file EXE len GitHub
-        uses: actions/upload-artifact@v4
+      - name: Build EXE
+        run: python -m PyInstaller --onefile --windowed --name AutoTrain_3Skill_Aegis_V25 AutoTrain_3Skill_Aegis_V25.py
+      - uses: actions/upload-artifact@v4
         with:
-          name: AutoSkill_3Skill_Aegis_V25
-          path: dist/AutoSkill_3Skill_Aegis_V25.exe
+          name: AutoTrain_3Skill_Aegis_V25
+          path: dist/AutoTrain_3Skill_Aegis_V25.exe
           if-no-files-found: error
+
